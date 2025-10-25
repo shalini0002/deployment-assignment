@@ -9,7 +9,14 @@ set -e
 yum update -y
 
 # Install required packages
-yum install -y docker git nginx python3 python3-pip nodejs npm
+yum install -y docker git python3 python3-pip
+
+# Install nginx using Amazon Linux Extras
+amazon-linux-extras install -y nginx1
+
+# Install Node.js (Amazon Linux 2 doesn't have npm in default repos)
+curl -fsSL https://rpm.nodesource.com/setup_18.x | bash -
+yum install -y nodejs
 
 # Start and enable Docker
 systemctl start docker

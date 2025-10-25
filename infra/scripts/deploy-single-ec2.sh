@@ -6,11 +6,11 @@
 set -e
 
 # Configuration
-AWS_REGION="us-east-1"
+AWS_REGION="ap-south-1"
 INSTANCE_TYPE="t3.micro"
-KEY_NAME="your-key-pair"
+KEY_NAME="task-manager-key"
 SECURITY_GROUP_NAME="task-manager-sg"
-AMI_ID="ami-0c02fb55956c7d316" # Amazon Linux 2 AMI
+AMI_ID="ami-0059e0da390478151" # Amazon Linux 2 AMI for ap-south-1
 USER_DATA_FILE="user-data-single.sh"
 
 echo "🚀 Starting deployment of Task Manager on Single EC2 Instance..."
